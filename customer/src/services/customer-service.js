@@ -1,6 +1,6 @@
 const { CustomerRepository } = require('../database');
 const {
-  FormateData: FormatData,
+  FormatData: FormatData,
   GeneratePassword,
   GenerateSalt,
   GenerateSignature,
@@ -173,6 +173,9 @@ class CustomerService {
         break;
       case 'CREATE_ORDER':
         this.ManageOrder(userId, order);
+        break;
+      case 'TEST':
+        console.log('Working..... Subscriber');
         break;
       default:
         break;
