@@ -19,3 +19,7 @@ A microservice architecture based apis written to support selling & purchasing o
    To use some kind of message broker or pub-sub Architecture.
 
 ![pub-sub Architecture](./imgs/pub-sub.png)
+
+## System Design.
+
+![system_design](./imgs/system-design.png)
