@@ -161,7 +161,7 @@ class CustomerRepository {
         if (cartItems.length > 0) {
           let isExist = false;
           cartItems.map((item) => {
-            if (item.product._id.toString() === product._id.toString()) {
+            if (item.product._id.toString() === _id.toString()) {
               if (isRemove) {
                 cartItems.splice(cartItems.indexOf(item), 1);
               } else {
@@ -190,7 +190,7 @@ class CustomerRepository {
       throw APIError(
         'API Error',
         STATUS_CODES.INTERNAL_ERROR,
-        'Unable to Create Customer'
+        'Unable to Add Item To Cart'
       );
     }
   }
@@ -217,7 +217,7 @@ class CustomerRepository {
       throw APIError(
         'API Error',
         STATUS_CODES.INTERNAL_ERROR,
-        'Unable to Create Customer'
+        'Unable to Add Order To Profile'
       );
     }
   }
