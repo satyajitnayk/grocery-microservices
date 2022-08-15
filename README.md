@@ -23,3 +23,7 @@ A microservice architecture based apis written to support selling & purchasing o
 ## System Design.
 
 ![system_design](./imgs/system-design.png)
+
+## Deployment In AWS.
+
+![Deployment](./imgs/deployment.png)
