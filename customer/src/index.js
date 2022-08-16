@@ -4,13 +4,17 @@ const { databaseConnection } = require('./database');
 const expressApp = require('./express-app');
 require('dotenv').config();
 
+const { CreateChannel } = require('./utils');
+
 const StartServer = async () => {
   // console.log(process.env.MONGODB_URI);
   const app = express();
 
   await databaseConnection();
 
-  await expressApp(app);
+  const channel = await CreateChannel();
+
+  await expressApp(app, channel);
 
   app
     .listen(PORT, () => {
