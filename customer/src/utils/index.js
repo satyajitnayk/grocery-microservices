@@ -73,7 +73,7 @@ module.exports.SubscribeMessage = async (channel, service) => {
     channel.bindQueue(appQueue.queue, EXCHANGE_NAME, CUSTOMER_BINDING_KEY);
 
     channel.consume(appQueue.queue, (data) => {
-      console.log('received data');
+      console.log('received data in Customer Service');
       console.log(data.content.toString());
       channel.ack(data);
     });
